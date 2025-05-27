@@ -1,101 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    padding: 20px; /* Add padding */
+    background-color: #ffffff; /* White background */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    align-items: flex-start; /* Align container to top */
+    min-height: 100vh;
+    color: #333;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens */
-    justify-content: center;
-    max-width: 600px;
-    width: 90%; /* Garante que não fique muito estreito */
-    min-height: 400px; /* Evita que fique esmagado */
-    background: white;
-    padding: 20px;
+    align-items: center;
+    justify-content: flex-start; /* Align content to top */
+    max-width: 800px; /* Consistent max-width */
+    width: 90%;
+    background: #f8f9fa; /* Light grey background */
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     text-align: center;
+    margin-top: 30px; /* Add margin from top */
 }
 
+h1 {
+    color: #0d2c5a; /* Blue title */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0d2c5a; /* Blue labels */
+    text-align: center; /* Align labels center */
+    width: 100%; /* Make labels take full width */
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px); /* Adjust width considering padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px; /* Adjust height */
+    resize: vertical; /* Allow vertical resize */
+    text-align: center; /* Center the text horizontally */
+}
 
 button {
     margin-top: 10px;
-    padding: 10px;
+    padding: 10px 20px; /* Adjusted padding */
     border: none;
-    background: #007BFF;
+    background: #0d2c5a; /* Blue background */
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background: #0056b3;
+    background: #0a2145; /* Darker blue on hover */
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: none;
 }
 
 #structureList {
     list-style: none;
     padding: 0;
+    width: 100%; /* Make list take full width */
+    margin-top: 20px;
 }
 
 #structureList li {
-    background: #e0e0e0;
-    padding: 10px;
-    margin: 5px;
+    background: #e9ecef; /* Slightly different grey for list items */
+    padding: 12px 15px;
+    margin-bottom: 8px; /* Use margin-bottom */
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    text-align: left;
 }
 
-textarea {
-    width: 100%;
-    height: 150px;
-    margin-top: 10px;
-    resize: none;
-}
-
-button.salvar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto; /* Centraliza horizontalmente */
-    padding: 10px;
-    border: none;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 200px; /* Define um tamanho fixo */
-    text-align: center;
-}
-
-
-
-button.salvar:hover {
-    background: #0056b3;
-}
-
-#structureList li {
-    background: #e0e0e0;
-    padding: 10px;
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    gap: 10px; /* Adiciona espaço entre o texto e o botão */
+#structureList li span { /* Style the text part */
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
 #structureList li button {
-    margin-left: 15px; /* Adiciona mais espaço entre o texto e o botão */
+    background-color: #dc3545; /* Red for delete button */
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: 10px; /* Ensure some space */
+    box-shadow: none;
 }
 
+#structureList li button:hover {
+    background-color: #c82333; /* Darker red */
+    transform: none; /* No lift effect for small buttons */
+}
+
+button.salvar {
+    background: #28a745; /* Green for save button */
+    width: auto; /* Let padding define width */
+    min-width: 150px;
+    margin-top: 20px;
+}
+
+button.salvar:hover {
+    background: #218838; /* Darker green */
+}
+
+/* Ensure icon is visible if used */
+img[src="baixados.ico"] {
+    display: inline-block; /* Or block depending on desired layout */
+    vertical-align: middle;
+    margin-right: 5px;
+}
 
